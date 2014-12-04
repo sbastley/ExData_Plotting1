@@ -6,11 +6,11 @@ rm(dat)
 ##strptime to label x axis with day names
 dates <- strptime(paste(data$Date,data$Time), format="%d/%m/%Y %H:%M:%S")
 
-
-png(file="plot4.png")
+##Type = cairo or cairo-png for more detailed plot lines. Default or windows is harder to see
+png(file="plot4.png", type="cairo")
 par(mfcol=c(2,2))
 with(data, {
-plot(dates, data$Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type="l")
+plot(dates, data$Global_active_power, xlab="", ylab="Global Active Power", type="l")
 
 plot(dates,data$Sub_metering_1,xlab="",ylab="Energy sub metering", type="l")
 lines(dates, data$Sub_metering_2, col="red")

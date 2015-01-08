@@ -1,5 +1,6 @@
+##Updated plot2.R
 ##Assumes unzipped Exdata folder within directory above working directory which is git repository
-##Use read.csv2 since this the data is semi-colon separated instead of comma separated
+##Use read.csv2 since this data is semi-colon separated instead of comma separated
 ##Makes column classes into character
 dat <- read.csv2("../exdata-data-household_power_consumption/household_power_consumption.txt", na.strings="?", colClasses="character")
 
